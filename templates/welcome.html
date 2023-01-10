@@ -1,0 +1,49 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'CSS/welcome.css' %}">
+    <style>
+    .ter {
+    background-image: url('../static/video/Terraria_1.gif');
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -99;
+    }
+
+    </style>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+{#    <link href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}" rel="stylesheet">#}
+</head>
+
+<body>
+{#    <video src="{% static 'video/Terraria.mp4' %}" autoplay="autoplay" loop="loop" muted="muted"></video>#}
+{#<video src="../../assets/video/bg.mp4" autoplay loop muted ></video>#}
+<div class="ter">
+  <div id="login_box">
+    <h2>Welcome</h2>
+      {% if message %}
+          <div class="alert alert-success">{{ message }}</div>
+      {% endif %}
+      <form method="post">
+          {%  csrf_token %}
+                <input type="text" name = "user" placeholder="Your name">
+                <input type="text" name = "link" placeholder="Link to your steam library">
+{#      <input type="submit" value = "submit">#}
+     <button type="submit">登录</button><br>
+      </form>
+  </div>
+</div>
+</body>
+
+</html>

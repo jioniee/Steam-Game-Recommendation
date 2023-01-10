@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+        <style>
+        body {
+          background-image: url('../static/image/steamlogo.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+
+
+        #box {
+            font-size: 40px;
+            text-shadow: 5px 5px 5px black, 0px 0px 2px black;
+            color: white;
+            text-align:center;
+            	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+        }
+
+        </style>
+	</head>
+	<body>
+    <div id="parent">
+        <div id="box"></div>
+    </div>
+
+	</body>
+	<script>
+		//5秒跳转页面
+		var b=document.getElementById("box");
+		b.innerHTML="It seems that you have too few games, how about go to the steam store to browse some new games? You are being redirected to steam store in 5 second";
+		var time=5;
+		//每隔一秒执行定时器
+		var timer=setInterval(function(){
+			if(time>0){
+				time--;
+				b.innerHTML="It seems that you have too few games, how about go to the steam store to browse some new games? " +
+                    "You are being redirected to steam store in " +time+" second";
+			}else{//终止定时器
+				//alert("跳转页面");
+				//open("http://www.baidu.com");
+				window.location.href="https://store.steampowered.com/";
+				timer.clearInterval();
+			}
+		},1000);
+	</script>
+</html>

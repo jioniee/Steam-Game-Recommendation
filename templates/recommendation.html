@@ -1,0 +1,125 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rec 3 results</title>
+    <link rel="stylesheet" href="{% static 'CSS/recommendation.css' %}">
+    <style>
+    body  {
+        background-image: url('../static/image/backghost.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+}
+</style>
+</head>
+
+<body>
+{#    <h1>Recommendation</h1>#}
+{#    <div class="box">#}
+{#        <a href="https://www.baidu.com/">#}
+{#        <ul class="slider">#}
+{##}
+{#            <li>#}
+{#                <input type="radio" name="slider" id="slider1" checked>#}
+{#                <label for="slider1"></label>#}
+{#                <img src={{ img1 }}>#}
+{##}
+{#            </li>#}
+{##}
+{#            <li>#}
+{#                <input type="radio" name="slider" id="slider2" >#}
+{#                <label for="slider2"></label>#}
+{#                <img src={{ img2 }}>#}
+{#            </li>#}
+{#            <li>#}
+{#                <input type="radio" name="slider" id="slider3">#}
+{#                <label for="slider3"></label>#}
+{#                <img src={{ img3 }}>#}
+{#            </li>#}
+{#        </ul>#}
+{#        </a>#}
+{#    </div>#}
+
+    {% if name1 %}
+    <div class="card">
+        <div class="photo">
+            <img src={{ img1}}>
+        </div>
+        <h1>{{ name1}}</h1>
+        <h2></h2>
+        <p>{{ price1 }} </p>
+        <p>{{ rate1 }} </p>
+        <a href={{ link1 }}>Learn more</a>
+    </div>
+
+    {% else %}
+    <div id="parent">
+        <div id="box">It seems that you have too few games, how about go to the steam store to browse some new games?</div>
+    </div>
+
+
+    {% endif %}
+
+    {% if name2 %}
+    <div class="card">
+        <div class="photo">
+            <img src={{ img2}}>
+        </div>
+        <h1>{{ name2}}</h1>
+        <h2></h2>
+        <p>{{ price2 }} </p>
+        <p>{{ rate2 }} </p>
+        <a href={{ link2 }}>Learn more</a>
+    </div>
+    {% endif %}
+
+    {% if name3 %}
+    <div class="card">
+        <div class="photo">
+            <img src={{ img3}}>
+        </div>
+        <h1>{{ name3}}</h1>
+        <h2></h2>
+        <p>{{ price3 }} </p>
+        <p>{{ rate3 }} </p>
+        <a href={{ link3 }}>Learn more</a>
+    </div>
+    {% endif %}
+
+    {% if name4 %}
+    <div class="card">
+        <div class="photo">
+            <img src={{ img4}}>
+        </div>
+        <h1>{{ name4}}</h1>
+        <h2></h2>
+        <p>{{ price4 }} </p>
+        <p>{{ rate4 }} </p>
+        <a href={{ link4 }}>Learn more</a>
+    </div>
+    {% endif %}
+
+    {% if name5 %}
+    <div class="card">
+        <div class="photo">
+            <img src={{ img5}}>
+        </div>
+        <h1>{{ name5}}</h1>
+        <h2></h2>
+        <p>{{ price5 }} </p>
+        <p>{{ rate5 }} </p>
+        <a href={{ link5 }}>Learn more</a>
+    </div>
+    {% endif %}
+
+</body>
+
+
+
+</html>
